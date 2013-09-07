@@ -1,3 +1,23 @@
+<!-- modal contact form -->
+<div id="contactFormModal" class="modal hide fade" tabindex="-1" role="dialog">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">x</button>
+		<h3>Contact Austin</h3>
+	</div>
+	<div class="modal-body">
+		<input type="text" placeholder="Your email address" required>
+		<textarea style="width: 97%" rows="17" placeholder="Don't you hate these things? I can never tell if the person is going to actually read my message and maybe I'm just talking to some dusty old server that someone forgot to switch off.  Don't worry!  I actually do read these messages!  I just have to use this to keep the spammers away."></textarea>
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal">Cancel</button>
+		<button class="btn btn-primary" data-dismiss="modal">Send</button>
+
+	</div>
+</div>
+
+
+
+
 <h1>Contact me</h1>
 <p>Want to chat about life? Or hire me to build you a website so you can become a billionare?  Let's do this.</p>
 
@@ -16,4 +36,4 @@
 
 
 
-<p>Oh and you can <a href="#">email me</a> I guess</p>
+<p>Oh, and you can <a href="#contactFormModal" data-toggle="modal">email me</a> I guess</p>
