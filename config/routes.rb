@@ -4,6 +4,7 @@ AustinkeeleyCom::Application.routes.draw do
   
   match '/about' => 'pages#about'
   match '/contact' => 'pages#contact'
+  match 'contact/submit' => 'contact#submit'
   match '/code' => 'pages#code'
 
 

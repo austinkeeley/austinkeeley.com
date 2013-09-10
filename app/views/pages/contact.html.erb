@@ -1,18 +1,26 @@
+<!-- Code for submitting the form with jQuery -->
+<script type="text/javascript">
+    function send_contact_form(event) {
+        $.post('/contact/submit', $('#contactForm').serialize());
+    }
+</script>
+
 <!-- modal contact form -->
 <div id="contactFormModal" class="modal hide fade" tabindex="-1" role="dialog">
-	<div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal">x</button>
-		<h3>Contact Austin</h3>
-	</div>
-	<div class="modal-body">
-		<input type="text" placeholder="Your email address" required>
-		<textarea style="width: 97%" rows="17" placeholder="Don't you hate these things? I can never tell if the person is going to actually read my message and maybe I'm just talking to some dusty old server that someone forgot to switch off.  Don't worry!  I actually do read these messages!  I just have to use this to keep the spammers away."></textarea>
-	</div>
-	<div class="modal-footer">
-		<button class="btn" data-dismiss="modal">Cancel</button>
-		<button class="btn btn-primary" data-dismiss="modal">Send</button>
-
-	</div>
+	<form id="contactForm">
+	    <div class="modal-header">
+	    	<button type="button" class="close" data-dismiss="modal">x</button>
+	    	<h3>Contact Austin</h3>
+	    </div>
+	    <div class="modal-body">
+	    	<input type="text" placeholder="Your email address" required>
+	    	<textarea style="width: 97%" rows="17" placeholder="Don't you hate these things? I can never tell if the person is going to actually read my message and maybe I'm just talking to some dusty old server that someone forgot to switch off.  Don't worry!  I actually do read these messages!  I just have to use this to keep the spammers away."></textarea>
+	    </div>
+	    <div class="modal-footer">
+	    	<button class="btn" data-dismiss="modal">Cancel</button>
+	    	<button class="btn btn-primary" data-dismiss="modal" onclick="send_contact_form(event)">Send</button>
+	    </div>
+	</form>
 </div>
 
 
