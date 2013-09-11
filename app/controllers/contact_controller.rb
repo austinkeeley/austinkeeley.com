@@ -12,6 +12,8 @@ class ContactController < ApplicationController
     message = params[:message]
     
     # do some stuff with email
+    ContactFormMailer.submit_contact_form.deliver
+    
     
     # return some json data
     render 'pages/contact_form_submit'
