@@ -62,4 +62,7 @@ module AustinkeeleyCom
     # Add Font-Awesome's font to the path
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   end
+  
+  # bring in general config file that isn't checked into version control
+  APP_CONFIG = YAML.load_file("#{Rails.root}/config/config.yml")
 end
